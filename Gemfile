@@ -17,8 +17,9 @@ gem 'database_cleaner'
 gem 'shoulda-matchers'
 gem 'bootstrap'
 gem 'omniauth-google-oauth2'
-# , "~> 0.2.1"
 gem 'figaro'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 
 gem 'bcrypt', '~> 3.1.7'

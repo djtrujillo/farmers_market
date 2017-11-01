@@ -16,6 +16,9 @@ gem 'react-rails'
 gem 'database_cleaner'
 gem 'shoulda-matchers'
 gem 'bootstrap'
+gem 'omniauth-google-oauth2'
+# , "~> 0.2.1"
+gem 'figaro'
 
 
 gem 'bcrypt', '~> 3.1.7'

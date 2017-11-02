@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   resources :home, only: [:show]
 
-  root to: "home#show"
+  # root to: "home#show"
+  root to: 'site#index'
+
 
   namespace :api do
     namespace :v1 do

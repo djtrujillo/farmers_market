@@ -20,6 +20,7 @@ gem 'omniauth-google-oauth2'
 gem 'figaro'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'responders'
 
 
 gem 'bcrypt', '~> 3.1.7'

@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
-  resources :home, only: [:show]
+  # resources :home, only: [:show]
 
   root to: "site#index"
+
+  resources :items, only: [:index, :show]
 
   namespace :api do
     namespace :v1 do

@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
     include ActionView::Helpers::TextHelper
   def index
-    @items = @cart.contents
+    @items = @cart.item_and_quantity
   end
 
   def create
@@ -11,5 +11,6 @@ class CartsController < ApplicationController
     flash[:notice] = "You now have #{pluralize(@cart.count_of(item.id), item.name)}."
     redirect_back(fallback_location: root_path)
   end
+
 
 end

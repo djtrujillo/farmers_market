@@ -12,6 +12,15 @@ class Cart
     contents[id.to_s].to_i
   end
 
+  def item_and_quantity
+  items = {}
+  contents.each do |item_id, quantity|
+    items[Item.find(item_id)] = quantity
+  end
+  items
+end
+
+
 
 
 end

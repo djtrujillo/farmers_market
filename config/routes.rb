@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index, :show]
 
-  resources :carts, only: [:index]
+  resources :carts, only: [:index, :create]
 
   namespace :api do
     namespace :v1 do

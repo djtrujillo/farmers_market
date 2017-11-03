@@ -4,6 +4,14 @@ class Cart
     @contents = initial_contents || {}
   end
 
+  def add_item(id)
+    contents[id.to_s] = (contents[id.to_s] || 0) + 1
+  end
+
+  def count_of(id)
+    contents[id.to_s].to_i
+  end
+
 
 
 end

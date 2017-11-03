@@ -2,19 +2,26 @@ require 'rails_helper'
 
 feature "user can add items to cart" do
   scenario "as a user visiting items page" do
-    item1 = create(:item)
+    item = create(:item)
 
-    visit "/items/#{item1.id}"
+    visit "/items"
 
     click_on "Add to Basket"
 
-    expect(current_path).to eq("/cart")
+    expect(page).to have_content("You now have 1 #{item.name}")
+  end
 
-    expect(page).to have_content(item1.name)
-    expect(page).to have_content(item1.description)
-    expect(page).to have_content(item1.price)
-    expect(page).to have_content(item1.unit_measurement)
+  scenario "the message correctly increments for multiple items" do
+    item = create(:item)
 
-    expect(page).to have_link("checkout")
+    visit "/items"
+
+    click_on "Add to Basket"
+
+    expect(page).to have_content("You now have 1 #{item.name}")
+
+    click_on "Add to Basket"
+
+    expect(page).to have_content("You now have 2 #{item.name}")
   end
 end

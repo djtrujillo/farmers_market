@@ -27,5 +27,3 @@ feature "visitor can create account" do
 
   end
 end
-
-feature "visitor can create account "

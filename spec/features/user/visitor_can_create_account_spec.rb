@@ -20,8 +20,6 @@ feature "visitor can create account" do
 
     fill_in "user[password]", with: "123"
 
-    fill_in "user[confirm_password]", with: "123"
-
     click_on "Create Account"
 
     expect(User.last.first_name).to eq("Danny")

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature "visitor can visit cart" do
-  scenario "visitor adds items then visits cart" do
+feature "visitor can visit basket" do
+  scenario "visitor adds items then visits current basket" do
     item1 = create(:item)
 
 
@@ -11,7 +11,7 @@ feature "visitor can visit cart" do
 
     click_on "Basket"
 
-    expect(current_path).to eq(carts_path)
+    expect(current_path).to eq(baskets_path)
 
     expect(page).to have_content(item1.name)
     expect(page).to have_content(item1.price)

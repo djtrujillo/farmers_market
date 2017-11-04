@@ -5,7 +5,7 @@
 <%= item.description %>
 <%= item.price %>
 <%= item.unit_measurement %>
-<%= link_to "Add to Basket", carts_path(item_id: item.id), method: :post %>
+<%= link_to "Add to Basket", baskets_path(item_id: item.id), method: :post %>
 
 </div>
 <% end %>

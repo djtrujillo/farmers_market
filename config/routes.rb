@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   resources :items, only: [:index, :show]
 
+  resources :baskets, only: [:index, :create]
+
   resources :carts, only: [:index, :create]
 
   namespace :api do

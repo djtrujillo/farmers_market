@@ -10,7 +10,7 @@ feature "visitor can create account" do
 
     click_on "Basket"
 
-    expect(current_path).to eq(carts_path)
+    expect(current_path).to eq(baskets_path)
 
     click_on "Create New Account"
 

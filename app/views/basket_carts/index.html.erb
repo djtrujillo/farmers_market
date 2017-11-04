@@ -1,0 +1,15 @@
+<% @items.each do |item, quantity| %>
+<%= item.name %>
+<%= item.price %>
+<%= item.unit_measurement %>
+<%= quantity %>
+<% end %>
+
+<div class="checkout">
+  <% if current_user %>
+    Checkout
+  <% else %>
+    <%= link_to "Login", login_path %> <br />
+    <%= link_to "Create New Account", new_user_path %>
+  <% end %>
+</div>

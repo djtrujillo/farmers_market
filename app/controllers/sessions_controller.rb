@@ -1,12 +1,11 @@
 class SessionsController < ApplicationController
   def new
-
   end
 
   def create
     if params[:provider].present?
       @user = User.from_omniauth(request.env["omniauth.auth"])
-      session[:user_id] = user.id
+      session[:user_id] = @user.id
       redirect_to root_path
     else
       @user = User.find_by(email: params[:session][:email])

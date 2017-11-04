@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_basket
-    @basket ||= Basket.new(session[:basket])
+    @basket_cart ||= BasketCart.new(session[:basket_cart])
   end
 
 end

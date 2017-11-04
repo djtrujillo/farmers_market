@@ -3,4 +3,4 @@
 <p><%= @item.price %></p>
 <p><%= @item.unit_measurement %></p>
 
-<%= link_to "Add to Basket", baskets_path(item_id: @item.id), method: :post %>
+<%= link_to "Add to Basket", basket_carts_path(item_id: @item.id), method: :post %>

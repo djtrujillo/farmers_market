@@ -10,7 +10,6 @@ class CartsController < ApplicationController
     session[:cart] = @cart.contents
     flash[:notice] = "You now have #{pluralize(@cart.count_of(basket.id), basket)} in your cart."
     redirect_to carts_path
-    # redirect_back(fallback_location: root_path)
   end
 
 end

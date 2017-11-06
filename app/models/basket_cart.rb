@@ -20,4 +20,8 @@ class BasketCart
     items
   end
 
+  def destroy
+    @contents.clear
+  end
+
 end

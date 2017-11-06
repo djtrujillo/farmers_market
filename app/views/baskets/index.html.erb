@@ -1,0 +1,8 @@
+<% @baskets.all.each do |basket| %>
+  <%= basket.items.each do |item| %>
+    <%= item.name %>
+    <%= item.price %>
+    <%= item.unit_measurement %>
+  <% end %>
+  <%= link_to "Add to Cart" carts_path(@basket), method: :post %>
+<% end %>

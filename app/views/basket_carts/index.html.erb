@@ -7,7 +7,8 @@
 
 <div class="checkout">
   <% if current_user %>
-    Checkout
+  <%= link_to "Create Basket", new_basket_path(items: @items) %>
+
   <% else %>
     <%= link_to "Login", login_path %> <br />
     <%= link_to "Create New Account", new_user_path %>

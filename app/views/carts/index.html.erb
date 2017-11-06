@@ -1,9 +1,15 @@
-<% @items.each do |item, quantity| %>
-<%= item.name %>
-<%= item.price %>
-<%= item.unit_measurement %>
+<% @baskets.each do |basket, quantity| %>
+<%= link_to "#{basket.id}", basket_path(basket) %>
 <%= quantity %>
+<ul>
+  <% basket.items.each do |item| %>
+    <li><%= item.name  %></li>
+    <li><%= item.price %></li>
+  <% end %>
+</ul>
 <% end %>
+
+
 
 <div class="checkout">
   <% if current_user %>

@@ -6,5 +6,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @nutrion = NutritionInfoService.new.nutrition(@item.name)
   end
+
+
 end

@@ -1,11 +1,21 @@
-<%= @category.title %>
 
-<%= @items.each do |item| %>
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+    <div class="center-block">
+      <div class="card border-white" style="width: 15rem;">
+        <%= image_tag "/images#{item.image_path}", size: "250" %>
+        <div class="card-body">
+          <center><p><strong><%= link_to item.name, item_path(item) %></strong></p>
+            <!-- <p>Description: <%= item.description %></p> -->
+            <p>Price: $<%= item.price %></p>
+            <p>Per: <%= item.unit_measurement %></p>
+            <p><%= item.description %></p>
+            <%= link_to "Add to Basket", basket_carts_path(item_id: item.id), method: :post, class: "badge badge-primary" %>
 
-  <%= link_to "#{item.name}", item_path(item) %>
-  <%= item.description %>
-  <%= item.price %>
-  <%= item.unit_measurement %>
-  <%= link_to "Add to Basket", basket_carts_path(item_id: item.id), method: :post %>
-
-<% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

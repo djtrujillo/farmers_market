@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature "visitor can visit basket" do
   scenario "visitor adds items then visits current basket" do
-    item1 = create(:item)
-
+    category = create(:category)
+    item1 = create(:item, category_id: category.id)
 
     visit '/items'
 

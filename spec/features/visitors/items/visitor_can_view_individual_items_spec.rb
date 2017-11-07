@@ -2,7 +2,8 @@ require 'rails_helper'
 
 feature "user can view items" do
   scenario "as a user visiting items page" do
-    item1 = create(:item)
+    category = create(:category)
+    item1 = create(:item, category_id: category.id)
 
     visit "/items"
 

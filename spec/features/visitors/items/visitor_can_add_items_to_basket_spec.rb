@@ -2,7 +2,8 @@ require 'rails_helper'
 
 feature "user can add items to cart" do
   scenario "as a user visiting items page" do
-    item = create(:item)
+    category = create(:category)
+    item = create(:item, category_id: category.id)
 
     visit "/items"
 

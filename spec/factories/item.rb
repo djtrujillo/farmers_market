@@ -8,5 +8,6 @@ FactoryGirl.define do
     unit_measurement "lbs"
     days_to_maturity 3
     role 0
+    association :category
   end
 end

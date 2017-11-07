@@ -2,9 +2,11 @@ require 'rails_helper'
 
 feature "user can view items" do
   scenario "as a user visiting the dashboard" do
-    item1 = create(:item)
-    item2 = create(:item)
-    item3 = create(:item)
+    category = create(:category)
+    item1 = create(:item, category_id: category.id)
+    item2 = create(:item, category_id: category.id)
+    item3 = create(:item, category_id: category.id)
+
 
     visit "/"
 

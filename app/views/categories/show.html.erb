@@ -1,0 +1,11 @@
+<%= @category.title %>
+
+<%= @items.each do |item| %>
+
+<%= link_to "#{item.name}", item_path(item) %>
+<%= item.description %>
+<%= item.price %>
+<%= item.unit_measurement %>
+<%= link_to "Add to Basket", basket_carts_path(item_id: item.id), method: :post %>
+
+<% end %>

@@ -1,6 +1,7 @@
 class BasketsController < ApplicationController
   def index
-    @baskets = Basket.all
+    current_user.baskets.all
+    # @baskets = Basket.all
   end
 
   def new

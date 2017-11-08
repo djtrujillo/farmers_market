@@ -12,7 +12,7 @@ describe NutritionixService do
     let(:nutrition) { NutritionixService.new.nutrients("tomato") }
     let(:instant) { NutritionixService.new.instant }
     it "#nutrition" do
-      expect(nutrition).to be_a Array
+      expect(nutrition).to be_a Hash
     end
 
   end

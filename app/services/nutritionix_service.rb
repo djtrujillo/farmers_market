@@ -10,11 +10,6 @@ class NutritionixService
 
   end
 
-  # def instant
-  #   response = @conn.get("/v2/search/instant?query=tomato")
-  #   json = JSON.parse(response.body)
-  # end
-
   def nutrients(name)
     body = JSON.generate(:query => name)
     response = @conn.post do |req|
@@ -24,6 +19,4 @@ class NutritionixService
     end
     response_json = JSON.parse(response.body, symbolize_names: true)[:foods].first
   end
-
-
 end

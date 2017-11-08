@@ -24,8 +24,7 @@ feature "a user can create basket" do
     expect(current_path).to eq(carts_path)
     expect(Basket.count).to eq(1)
     expect(page).to have_link(Basket.last.id)
-    expect(page).to have_content(item.name)
-    expect(page).to have_content(item.price)
+
   end
 
   scenario "visitors aren't able to create baskets" do

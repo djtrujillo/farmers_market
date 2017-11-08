@@ -1,3 +1,19 @@
-<% @categories.each do |category| %>
-<%= link_to "#{category.title}", category_path(category) %>
-<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <% @categories.each do |category| %>
+
+
+    <div class="center-block">
+      <div class="card border-white" style="width: 15rem;">
+        <%= image_tag "/images#{category.items.first.image_path}", size: "250" %>
+        <div class="card-body">
+          <center><p><strong><%= link_to "#{category.title}", category_path(category) %></strong></p>
+
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

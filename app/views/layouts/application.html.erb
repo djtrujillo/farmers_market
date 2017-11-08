@@ -54,22 +54,9 @@
                 <a class="nav-link" href="/login">Login or Create Account</a>
               </li>
           <% end %>
-
-
-
-
-
-
         </ul>
       </div>
     </nav>
-
-
-    <%= link_to "Cart", carts_path %>
-
-
-
-
 
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: "alert alert-info" %>
@@ -78,10 +65,9 @@
 
       <div class="container">
         <div class="card card-inverse">
-          <%= image_tag("https://www.cropking.com/sites/default/files/ht1_0.jpg", class: "card-img") %>
-          <div class="card-img-overlay">
-            <h1 class="card-title text-center text-white"><%= link_to "Farmer's Market", root_path %></h1>
-          </div>
+          <h1 class="card-title text-center text-white"><%= link_to "Farmer's Market", root_path %></h1>
+
+          <%= image_tag("/images/greenhouse2.jpg", class: "card-img") %>
         </div>
       </div>
 

@@ -1,8 +1,22 @@
-<% @baskets.all.each do |basket| %>
-  <%= basket.items.each do |item| %>
-    <%= item.name %>
-    <%= item.price %>
-    <%= item.unit_measurement %>
-  <% end %>
-  <%= link_to "Add to Cart", carts_path(basket), method: :post %>
-<% end %>
+
+
+
+<div class="container">
+  <div class="row">>
+    <%= @baskets.each do |basket| %>
+    <div class="center-block">
+      <div class="card border-white" style="width: 15rem;">
+        <%= image_tag "/images/basket.jpg", size: "250" %>
+        <div class="card-body">
+          <center><p><strong>Items in Basket</strong></p>
+          <% basket.items.each do |item| %>
+            <center><p><%= link_to item.name, item_path(item) %></p>
+          <% end %>
+          <center><p><%= link_to "Add to Cart", carts_path(basket_id: basket.id), method: :post %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </div>

@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     basket = Basket.find(params[:basket_id])
     @cart.add_basket(basket.id)
     session[:cart] = @cart.contents
-    flash[:notice] = "You now have #{pluralize(@cart.count_of(basket.id), basket)} in your cart."
+    flash[:notice] = "You now have #{pluralize(@cart.count_of(basket.id), "basket")} in your cart."
     redirect_to carts_path
   end
 

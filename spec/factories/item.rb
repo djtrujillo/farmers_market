@@ -8,6 +8,7 @@ FactoryGirl.define do
     unit_measurement "lbs"
     days_to_maturity 3
     role 0
+    image_path "/cucumber_corinto.jpg"
     association :category
   end
 end

@@ -18,6 +18,12 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+
+          <% if current_user %>
+            <li class="nav-item active">
+              <a class="nav-link" href="/baskets">Saved Baskets</a>
+            </li>
+          <% end %>
           <% if @basket_cart.contents.count > 0  %>
               <li class="nav-item active">
                 <a class="nav-link" href="/basket_carts">Current Basket<span class="sr-only">(current)</span></a>

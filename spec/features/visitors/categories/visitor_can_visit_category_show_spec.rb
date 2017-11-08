@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "visitor can visit category show page" do
   scenario "from category index" do
 
-    category = create(:category)
+    category = Category.create(title: "Tomato")
 
     item = create(:item, category_id: category.id)
     visit "/categories"

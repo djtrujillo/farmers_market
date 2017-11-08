@@ -9,7 +9,7 @@ feature "visitor can visit basket" do
 
     click_on "Add to Basket"
 
-    click_on "Basket"
+    click_on "Current Basket"
 
     expect(current_path).to eq(basket_carts_path)
 

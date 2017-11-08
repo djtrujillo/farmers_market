@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
     @basket_cart ||= BasketCart.new(session[:basket_cart])
   end
 
+  def require_current_user
+    render file: "/public/404" unless current_user
+  end
+
 end

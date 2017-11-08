@@ -1,7 +1,8 @@
 class BasketsController < ApplicationController
+  before_action :require_current_user
+
   def index
-    current_user.baskets.all
-    # @baskets = Basket.all
+    @baskets = current_user.baskets.all
   end
 
   def new

@@ -4,5 +4,5 @@
     <%= item.price %>
     <%= item.unit_measurement %>
   <% end %>
-  <%= link_to "Add to Cart" carts_path(@basket), method: :post %>
+  <%= link_to "Add to Cart", carts_path(basket), method: :post %>
 <% end %>

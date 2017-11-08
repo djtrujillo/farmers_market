@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(first_name: "Dan", last_name: "Trujillo", email: "danny@danny.com", password: "123")
+User.create(first_name: "test", last_name: "test", email: "danny@danny.com", password: "123")
+User.create(first_name: "test1", last_name: "test1", email: "danny@danny.com", password: "123")
 
 lettuce = Category.create(title: "Lettuce")
 tomato = Category.create(title: "Tomato")
@@ -30,12 +32,12 @@ eggplant.items.create(name: "Jaylo", description: "Vigorous Black Italian type w
 tomato.items.create(name: "French Heritage", description: "French hybrid-heirloom types with the exceptional flavor of Provence", price: 2.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_french_heritage.jpg" )
 tomato.items.create(name: "Sakura", description: "Early, delicious and attractive cherry ", price: 1.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_sakura.jpg")
 tomato.items.create(name: "Bigdena", description: "large fruit with very good flavor", price: 3.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_bigdena.jpg" )
-tomato.items.create(name: "Granadero", description: "Our most prolific plum with very good flavo", price: 1.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_grandero.jpg" )
+tomato.items.create(name: "Granadero", description: "Our most prolific plum with very good flavo", price: 1.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_granadero.jpg" )
 tomato.items.create(name: "Tiren", description: "Early, classic San Marzano shape", price: 2.99, unit_measurement: "single", days_to_maturity: 12, role: 0, category_id: tomato.id, image_path: "/tomato_tiren.jpg" )
 
 lettuce.items.create(name: "Mini Romaine", description: "Three minis in contrasting colors for an attractive presentation", price: 2.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_mini_head_romaines_set.jpg" )
 lettuce.items.create(name: "Breen", description: "Early producer of truly compact mini heads with bronze-red color", price: 1.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_breen.jpg" )
-lettuce.items.create(name: "Green Butter", description: "Dense rosette heads with buttery flavor and attractive, supple leaves.", price: 3.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_green_butter.jpg" )
+lettuce.items.create(name: "Green Butter", description: "Dense rosette heads with buttery flavor and attractive, supple leaves.", price: 3.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_greenbutter.jpg" )
 lettuce.items.create(name: "Dragoon", description: "Compact and uniform mini green romaine with excellent, crisp texture.", price: 1.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_dragoon.jpg" )
 lettuce.items.create(name: "Truchas", description: "Compact, filled-out mini heads that are dark-red even in the North.", price: 2.99, unit_measurement: "head", days_to_maturity: 12, role: 0, category_id: lettuce.id, image_path: "/lettuce_truchas.jpg" )
 

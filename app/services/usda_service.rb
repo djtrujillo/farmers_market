@@ -23,7 +23,7 @@ class UsdaService
     # Faraday.post(url: )
     # response = conn.get("/ndb/reports/V2?ndbno=#{ndbno}&type=b&format=json&api_key=#{ENV['usda_api_key']}")
     # nutrition = JSON.parse(response.body)
-    binding.pry
+
   end
 
   private
